@@ -3,13 +3,17 @@ body {
     padding:0;
    
 }
+.title {
+text-align: center;
+}
 
 .contentConatiner {
+
     margin-top: 40px;
     border: 2px solid black;
     margin: 0 auto;
-    height: 208px;
-    width: 208px;
+    height: 610px;
+    width: 610px;
    
 
 

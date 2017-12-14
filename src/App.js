@@ -4,11 +4,20 @@ import "./App.css";
 
 
 class App extends Component {
+
+  state = {
+    boxArr : []
+
+  }
+
+
+
+
   render() {
     return (
       <div>
 
-        <h1>The Simon Game</h1>
+        <h1 className="title">The Simon Game</h1>
       <div className="contentConatiner">
       <CompOne/>
        <CompOne/>
