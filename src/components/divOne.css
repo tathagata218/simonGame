@@ -1,5 +1,5 @@
 
-}
+
 .mainDiv{
     height: 300px;
     width : 300px;
@@ -14,20 +14,23 @@
     border-top-left-radius: 100%;   
     border-top-right-radius:0;
     border-bottom-right-radius:0;
-    border-bottom-left-radius:0;}
+    border-bottom-left-radius:0;
+}
 .divTwo{background-color: green;
-    border-top-left-radius: 100%;
-    border-top-right-radius:0;
+    border-top-left-radius: 0;
+    border-top-right-radius:100%;
     border-bottom-right-radius:0;
-    border-bottom-left-radius:0;}
+    border-bottom-left-radius:0;
+}
 .divThree{background-color: yellow;
-    border-top-left-radius: 100%;
+    border-top-left-radius: 0;
     border-top-right-radius:0;
-    border-bottom-right-radius:0;
-    border-bottom-left-radius:0;}
+    border-bottom-right-radius:100%;
+    border-bottom-left-radius:0;
+}
 .divFour{background-color: blue;
-    border-top-left-radius: 100%;
+    border-top-left-radius: 0;
     border-top-right-radius:0;
     border-bottom-right-radius:0;
-    border-bottom-left-radius:0;}
+    border-bottom-left-radius:100%;}
 
