@@ -10,23 +10,11 @@ text-align: center;
 .contentConatiner {
     border-radius: 50%;
     margin-top: 40px;
-    border: 2px solid black;
+    border: 26px solid black;
     margin: 0 auto;
     height: 610px;
     width: 610px;
+    z-index: 0;
    
 }
 
-.divOne{
-    background-color: blue;
-}
-
-.divTwo{
-    background-color: yellow;
-}
-.divThree{
-    background-color: red;
-}
-.divFour{
-    background-color: green;
-}

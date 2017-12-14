@@ -3,5 +3,12 @@
     width : 300px;
     border: 2px solid black;
    float: left;
+   z-index: -1;
     
 }
+
+.divOne{background-color: red;}
+.divTwo{background-color: green;}
+.divThree{background-color: yellow;}
+.divFour{background-color: blue;}
+
