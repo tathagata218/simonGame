@@ -19,10 +19,10 @@ class App extends Component {
 
         <h1 className="title">The Simon Game</h1>
       <div className="contentConatiner">
-      <CompOne/>
-       <CompOne/>
-       <CompOne/>
-       <CompOne/>
+      <CompOne className = "divOne" />
+       <CompOne className = "divTwo"/>
+       <CompOne className = "divThree"/>
+       <CompOne className = "divFour"/>
        </div>
       </div>
     );
