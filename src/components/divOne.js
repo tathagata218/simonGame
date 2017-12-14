@@ -5,11 +5,12 @@ render (){
     return (
     <div>
         <div className="gameContent"></div>
+        
         <div className="colorDivContainer">
-        <div className="divOne mainDiv"></div>
-        <div className="divTwo mainDiv"></div>
-        <div className="divThree mainDiv"></div>
-        <div className="divFour mainDiv"></div>
+            <div className="divOne mainDiv"></div>
+            <div className="divTwo mainDiv"></div>
+            <div className="divThree mainDiv"></div>
+            <div className="divFour mainDiv"></div>
        </div> 
     </div>
     )

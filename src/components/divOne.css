@@ -13,8 +13,12 @@
 .gameContent {
     height: 200px;
     width: 200px;
+    background-color: beige;
+    position: relative;
 }
-
+.colorDivContainer{
+   
+}
 .divOne{background-color: red;
     border-top-left-radius: 100%;   
     border-top-right-radius:0;
