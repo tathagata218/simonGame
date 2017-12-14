@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 
-const CompOne = (props) =>{
-
-    render (){
+class CompOne extends Component{
+render (){
     return (
     <div>
     <p>This is just a tag</p>
