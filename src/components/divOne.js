@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "divOne.css";
+import "./divOne.css";
 class CompOne extends Component{
 render (){
     return (
