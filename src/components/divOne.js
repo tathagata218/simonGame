@@ -3,8 +3,8 @@ import "./divOne.css";
 class CompOne extends Component{
 render (){
     return (
-    <div>
-        <div className="gameContent"></div>
+    <div className="gameContent">
+     
         
         <div className="colorDivContainer">
             <div className="divOne mainDiv"></div>
