@@ -4,7 +4,7 @@ class CompOne extends Component{
 render (){
     return (
     <div>
-    <p>This is just a tag</p>
+   
     </div>
     )
 }
