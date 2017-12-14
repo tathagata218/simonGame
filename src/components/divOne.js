@@ -3,7 +3,7 @@ import "./divOne.css";
 class CompOne extends Component{
 render (){
     return (
-    <div>
+    <div className="main">
         <div className="divOne mainDiv"></div>
         <div className="divTwo mainDiv"></div>
         <div className="divThree mainDiv"></div>
