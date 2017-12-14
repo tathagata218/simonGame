@@ -6,7 +6,12 @@ class App extends Component {
   render() {
     return (
       <div>
+      <div className="contentConatiner">
+        <CompOne/>
        <CompOne/>
+       <CompOne/>
+       <CompOne/>
+       </div>
       </div>
     );
   }
