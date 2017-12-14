@@ -8,4 +8,4 @@ const CompOne  = (props) => {
 
 }
 
-export default CompOne
+export default CompOne;
