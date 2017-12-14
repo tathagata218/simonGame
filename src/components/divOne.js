@@ -4,7 +4,7 @@ class CompOne extends Component{
 render (){
     return (
     <div className="gameContent">
-     
+     <div className="inforDiv"></div>
         
         <div className="colorDivContainer">
             <div className="divOne mainDiv"></div>
