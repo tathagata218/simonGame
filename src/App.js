@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CompOne from "./component/DivOne.js"
+import CompOne from "./components/DivOne.js"
 
 
 class App extends Component {
