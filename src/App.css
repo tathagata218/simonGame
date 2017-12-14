@@ -15,6 +15,18 @@ text-align: center;
     height: 610px;
     width: 610px;
    
+}
 
+.divOne{
+    background-color: blue;
+}
 
+.divTwo{
+    background-color: yellow;
+}
+.divThree{
+    background-color: red;
+}
+.divFour{
+    background-color: green;
 }
