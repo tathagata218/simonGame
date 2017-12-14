@@ -25,12 +25,12 @@
 .divThree{background-color: yellow;
     border-top-left-radius: 0;
     border-top-right-radius:0;
-    border-bottom-right-radius:100%;
-    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:100%;
 }
 .divFour{background-color: blue;
     border-top-left-radius: 0;
     border-top-right-radius:0;
-    border-bottom-right-radius:0;
-    border-bottom-left-radius:100%;}
+    border-bottom-right-radius:100%;
+    border-bottom-left-radius:0;}
 

@@ -12,9 +12,15 @@ text-align: center;
     margin-top: 40px;
     border: 26px solid black;
     margin: 0 auto;
-    height: 610px;
-    width: 610px;
- 
-   
-}
+    height: 608px;
+    width: 608px;
+    
+ }
+
+ .infoContent{
+    
+     height: 100px;
+     width:100px;
+     background-color: beige;
+ }
 
