@@ -1,18 +1,33 @@
-.main{
-    border-radius: 50%;
+
 }
 .mainDiv{
     height: 300px;
     width : 300px;
     border: 2px solid black;
    float: left;
-   z-index: -1;
+
     
 }
 
 
-.divOne{background-color: red;}
-.divTwo{background-color: green;}
-.divThree{background-color: yellow;}
-.divFour{background-color: blue;}
+.divOne{background-color: red;
+    border-top-left-radius: 100%;   
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;}
+.divTwo{background-color: green;
+    border-top-left-radius: 100%;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;}
+.divThree{background-color: yellow;
+    border-top-left-radius: 100%;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;}
+.divFour{background-color: blue;
+    border-top-left-radius: 100%;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;}
 
