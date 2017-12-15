@@ -9,17 +9,17 @@ render (){
      <h1>Simon</h1>
     <div id="btnContent">
         <div>
-            <div id ="">
+            <div id ="pointCol">
                 <h6>Points count</h6>
             </div>
             <p>Count</p>
         </div>
         <div>
-            <div></div>
+            <div id ="startLight" ></div>
             <button>Start</button>
         </div>
         <div>
-            <div></div>
+            <div id ="strictLight"></div>
             <button>Strict</button>
         </div>
     

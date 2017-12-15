@@ -6,7 +6,8 @@ import "./App.css";
 class App extends Component {
 
   state = {
-    boxArr : []
+    boxArr : [],
+    numOfWins : 0
 
   }
 

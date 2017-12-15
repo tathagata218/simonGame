@@ -50,3 +50,21 @@
 #btnContent{
     float: left;
 }
+
+#pointCol{
+    
+}
+
+#startLight{
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border-radius: 100%;
+}
+
+#strictLight{
+    height: 30px;
+    width: 30px;
+    background-color: yellow;
+    border-radius: 100%;
+}
