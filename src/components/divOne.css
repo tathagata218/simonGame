@@ -14,10 +14,14 @@
     position: relative;
 }
 .inforDiv{
-    height: 100px;
-    width: 100px;
+    height: 300px;
+    width: 300px;
     background-color: beige;
     position: absolute;
+    top: 140px;
+    right: 145px;
+    border-radius: 100%;
+    border: 15px solid black;
 }
 .divOne{background-color: red;
     border-top-left-radius: 100%;   
@@ -43,3 +47,6 @@
     border-bottom-right-radius:100%;
     border-bottom-left-radius:0;}
 
+#btnContent{
+    float: left;
+}
