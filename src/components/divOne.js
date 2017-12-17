@@ -29,10 +29,10 @@ render (){
      </div>
         
         <div className="colorDivContainer">
-            <div className="divOne mainDiv"></div>
-            <div className="divTwo mainDiv"></div>
-            <div className="divThree mainDiv"></div>
-            <div className="divFour mainDiv"></div>
+            <div name="one" className="divOne mainDiv"></div>
+            <div name="two" className="divTwo mainDiv"></div>
+            <div name="three" className="divThree mainDiv"></div>
+            <div name="four" className="divFour mainDiv"></div>
        </div> 
     </div>
     )
