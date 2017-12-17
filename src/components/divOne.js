@@ -8,18 +8,19 @@ render (){
     <div className="inforDiv">
      <h1>Simon</h1>
     <div id="btnContent">
-        <div>
+        <div className="disBtn">
             <div id ="pointCol">
-                <h6>Points count</h6>
+                <p>Points count</p>
             </div>
-            <p>Count</p>
+            <p>Count</p>          
         </div>
-        <div>
+        <div className="disBtn">
             <div id ="startLight" ></div>
             <button>Start</button>
         </div>
-        <div>
-            <div id ="strictLight"></div>
+        <div className="disBtn">
+            <div id="strictLight"></div>
+            <div id ="strictbtnLight"></div>
             <button>Strict</button>
         </div>
     
