@@ -19,7 +19,7 @@
     background-color: beige;
     position: absolute;
     top: 140px;
-    right: 145px;
+    right: 140px;
     border-radius: 100%;
     border: 15px solid black;
     text-align: center;
@@ -75,6 +75,10 @@ padding-top: 40px;
 #pointCol p {
     margin : 0;
     font-size: 10px;
+}
+
+.disBtn p{
+    margin : 0;
 }
 
 
