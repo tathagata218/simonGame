@@ -80,16 +80,6 @@ padding-top: 40px;
 .disBtn p{
     margin : 0;
 }
-
-
-#startLight{
-    height: 20px;
-    width: 20px;
-    margin : 0 auto;
-    background-color: red;
-    border-radius: 100%;
-}
-
 #strictLight{
     height: 10px;
     width: 10px;
@@ -97,10 +87,19 @@ padding-top: 40px;
     border-radius: 100%;
     background-color: black;
 }
-#strictbtnLight{
+
+#startGameBtn {
     height: 20px;
     width: 20px;
-    margin : 0 auto;
-    background-color: yellow;
     border-radius: 100%;
+    background-color: red;
+
+
+}
+
+#strictGameBtn {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: yellow;
 }

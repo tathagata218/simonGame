@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import "./divOne.css";
 class CompOne extends Component{
+
+
+
+
+
 render (){
     return (
     <div className="gameContent">
@@ -15,13 +20,13 @@ render (){
             <p>Count</p>          
         </div>
         <div className="disBtn">
-            <div id ="startLight" ></div>
-            <button>Start</button>
+            <button id="startGameBtn"></button>
+            <p>Start</p>
         </div>
         <div className="disBtn">
             <div id="strictLight"></div>
-            <div id ="strictbtnLight"></div>
-            <button>Strict</button>
+            <button id="strictGameBtn"></button>
+            <p>Strict</p>
         </div>
     
     </div>
