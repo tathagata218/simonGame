@@ -97,18 +97,20 @@ padding-top: 40px;
 }
 
 #startGameBtn {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     border-radius: 100%;
     background-color: red;
+    margin-top: 10px;
     
 
 
 }
 
 #strictGameBtn {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
+    margin-top:10px;
     border-radius: 100%;
     background-color: yellow;
 }
