@@ -80,6 +80,14 @@ padding-top: 40px;
 .disBtn p{
     margin : 0;
 }
+
+.disBtn button:active{
+    outline: none;
+}
+
+.disBtn button:hover{
+    cursor: pointer;
+}
 #strictLight{
     height: 10px;
     width: 10px;
