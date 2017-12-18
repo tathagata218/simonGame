@@ -7,12 +7,11 @@ class CompOne extends Component{
         numOfWins : 0,
         boxIntial : ["one","two","three","four "],
         startBtn : false,
-        stritctBtn : false,
+        stritctBtn : false
       }
 
 clickStart = () => {
-    alert("this is Start button test");
-    console.log(this.state);
+
 } 
 
 clickStrict = () => {
@@ -20,8 +19,12 @@ clickStrict = () => {
 } 
 
 clickOnOff = (event) => {
-   const data = event.target;
-    console.log(data);
+if(event.target.cheched){
+    this.setState({
+        gameOnandOff : event.target.cheched
+    });
+}
+ 
 } 
 
 
