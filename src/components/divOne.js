@@ -11,7 +11,7 @@ class CompOne extends Component{
       }
 
 clickStart = () => {
-
+console.log(this.state);
 } 
 
 clickStrict = () => {
@@ -47,7 +47,7 @@ render (){
         </div>
         <div className="disBtn">
             <div id="strictLight"></div>
-            <button id="strictGameBtn"></button>
+            <button id="strictGameBtn" onClick={this.clickStrict}></button>
             <p className="InfoScript">STRICT</p>
         </div>
     
