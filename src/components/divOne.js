@@ -31,7 +31,16 @@ render (){
     
     </div>
 
-     </div>
+    <div id ="slidBar">
+        <h3 className="onOffSwitch">ON</h3>
+        <label className="switch">
+            <input type="checkbox"/>
+            <span className="slider"></span>
+        </label>
+        <h3 className="onOffSwitch">OFF</h3>
+    </div>
+
+    </div>
         
         <div className="colorDivContainer">
             <div name="one" className="divOne mainDiv"></div>
