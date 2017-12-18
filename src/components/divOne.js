@@ -19,8 +19,9 @@ clickStrict = () => {
     alert("this is Start button test");
 } 
 
-clickOnOff = () => {
-    alert("this is Start button test");
+clickOnOff = (event) => {
+   const data = event.target;
+    console.log(data);
 } 
 
 
@@ -52,7 +53,7 @@ render (){
     <div id ="slidBar">
         <h3 className="onOffSwitch">OFF</h3>
         <label className="switch">
-            <input type="checkbox"/>
+            <input type="checkbox" id="checkOnOff" onChange={this.clickOnOff}/>
             <span className="slider"></span>
         </label>
         <h3 className="onOffSwitch">ON</h3>
