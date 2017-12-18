@@ -17,16 +17,16 @@ render (){
             <div id ="pointCol">
                 <h1 id="countID">00</h1>
             </div>
-            <p className="InfoScript">Count</p>          
+            <p className="InfoScript">COUNT</p>          
         </div>
         <div className="disBtn">
             <button id="startGameBtn"></button>
-            <p className="InfoScript">Start</p>
+            <p className="InfoScript">START</p>
         </div>
         <div className="disBtn">
             <div id="strictLight"></div>
             <button id="strictGameBtn"></button>
-            <p className="InfoScript">Strict</p>
+            <p className="InfoScript">STRICT</p>
         </div>
     
     </div>

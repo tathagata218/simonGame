@@ -188,10 +188,16 @@ padding-top: 15px;
 
   #slidBar {
     
-  }
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
 
   .onOffSwitch {
       padding : 0;
       margin: 0;
-      
+      padding-top: 8px;
+      padding-right: 5px;
+      padding-left: 5px;
+
   }
