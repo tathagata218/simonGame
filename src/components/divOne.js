@@ -2,8 +2,26 @@ import React, { Component } from "react";
 import "./divOne.css";
 class CompOne extends Component{
 
+    state = {
+        boxArr : [],
+        numOfWins : 0,
+        boxIntial : ["one","two","three","four "],
+        startBtn : false,
+        stritctBtn : false,
+      }
 
+clickStart = () => {
+    alert("this is Start button test");
+    console.log(this.state);
+} 
 
+clickStrict = () => {
+    alert("this is Start button test");
+} 
+
+clickOnOff = () => {
+    alert("this is Start button test");
+} 
 
 
 render (){
@@ -20,7 +38,7 @@ render (){
             <p className="InfoScript">COUNT</p>          
         </div>
         <div className="disBtn">
-            <button id="startGameBtn"></button>
+            <button id="startGameBtn" onClick={this.clickStart}></button>
             <p className="InfoScript">START</p>
         </div>
         <div className="disBtn">
@@ -32,12 +50,12 @@ render (){
     </div>
 
     <div id ="slidBar">
-        <h3 className="onOffSwitch">ON</h3>
+        <h3 className="onOffSwitch">OFF</h3>
         <label className="switch">
             <input type="checkbox"/>
             <span className="slider"></span>
         </label>
-        <h3 className="onOffSwitch">OFF</h3>
+        <h3 className="onOffSwitch">ON</h3>
     </div>
 
     </div>

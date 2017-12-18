@@ -5,17 +5,7 @@ import "./App.css";
 
 class App extends Component {
 
-  state = {
-    boxArr : [],
-    numOfWins : 0,
-    boxIntial : ["one","two","three","four"]
-
-  }
-
-
-
-
-  render() {
+ render() {
     return (
       <div>
 
