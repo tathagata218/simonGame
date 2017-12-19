@@ -44,6 +44,10 @@ clickOnOff = (event) => {
  
 }
 
+compGame = () => {
+    
+}
+
 clickDiv1 = () =>{
     let test = new  Audio();
     test.src ="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
@@ -66,6 +70,7 @@ clickDiv3 = () =>{
 }
 clickDiv4 = () =>{
     let test4 = new Audio();
+    let element = document.getElementById("four");
     test4.src = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
     if(this.state.gameOnandOff && this.state.startBtn){
     test4.play();}
@@ -112,10 +117,10 @@ render (){
     </div>
         
         <div className="colorDivContainer">
-            <div name="one" className="divOne mainDiv" onClick={this.clickDiv1} onMouseDown={this.colorChange}></div>
-            <div name="two" className="divTwo mainDiv" onClick={this.clickDiv2}></div>
-            <div name="three" className="divThree mainDiv" onClick={this.clickDiv3}></div>
-            <div name="four" className="divFour mainDiv" onClick={this.clickDiv4}></div>
+            <div id="one" name="one" className="divOne mainDiv" onClick={this.clickDiv1} ></div>
+            <div id="two" name="two" className="divTwo mainDiv" onClick={this.clickDiv2}></div>
+            <div id="three" name="three" className="divThree mainDiv" onClick={this.clickDiv3}></div>
+            <div id="four" name="four" className="divFour mainDiv" onClick={this.clickDiv4}></div>
        </div> 
     </div>
     )
