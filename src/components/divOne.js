@@ -71,6 +71,10 @@ clickDiv4 = () =>{
     test4.play();}
 }
 
+colorChange = () => {
+    alert("this works");
+}
+
 render (){
     return (
     <div className="gameContent">
@@ -108,7 +112,7 @@ render (){
     </div>
         
         <div className="colorDivContainer">
-            <div name="one" className="divOne mainDiv" onClick={this.clickDiv1}></div>
+            <div name="one" className="divOne mainDiv" onClick={this.clickDiv1} onMouseDown={this.colorChange}></div>
             <div name="two" className="divTwo mainDiv" onClick={this.clickDiv2}></div>
             <div name="three" className="divThree mainDiv" onClick={this.clickDiv3}></div>
             <div name="four" className="divFour mainDiv" onClick={this.clickDiv4}></div>
