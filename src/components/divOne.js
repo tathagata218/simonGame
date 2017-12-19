@@ -45,7 +45,13 @@ clickOnOff = (event) => {
 }
 
 compGame = () => {
-    
+    let element1 = document.getElementById("one");
+    let element2 = document.getElementById("two");
+    let element3 = document.getElementById("three");
+    let element4 = document.getElementById("four");
+
+    let randomNum
+
 }
 
 clickDiv1 = () =>{
