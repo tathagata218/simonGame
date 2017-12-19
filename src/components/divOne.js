@@ -18,6 +18,9 @@ this.setState({
     startBtn : true
 });
 
+
+
+
 } 
 
 clickStrict = () => {
@@ -50,7 +53,7 @@ compGame = () => {
     let element3 = document.getElementById("three");
     let element4 = document.getElementById("four");
 
-    let randomNum
+    let randomNum 
 
 }
 
