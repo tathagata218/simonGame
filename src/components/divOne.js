@@ -9,15 +9,21 @@ class CompOne extends Component{
         numOfWins : 0,
         boxIntial : ["one","two","three","four "],
         startBtn : false,
-        stritctBtn : false
+        strictBtn : false
       }
 
 clickStart = () => {
     
+this.setState({
+    startBtn : true
+});
+
 } 
 
 clickStrict = () => {
-    alert("this is Start button test");
+    this.setState({
+        strictBtn : true
+    }); 
 } 
 
 clickOnOff = (event) => {
@@ -38,7 +44,7 @@ clickOnOff = (event) => {
 clickDiv1 = () =>{
     let test = new  Audio();
     test.src ="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
-    if(this.state.gameOnandOff){
+    if(this.state.gameOnandOff && this.state.startBtn){
     test.play();
         }
 }
@@ -46,19 +52,19 @@ clickDiv1 = () =>{
 clickDiv2 = () =>{
     let test2 = new Audio();
     test2.src = "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3";
-    if(this.state.gameOnandOff){
+    if(this.state.gameOnandOff && this.state.startBtn){
     test2.play();}
 }
 clickDiv3 = () =>{
     let test3 = new Audio();
     test3.src = "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3";
-    if(this.state.gameOnandOff){
+    if(this.state.gameOnandOff && this.state.startBtn) {
     test3.play();}
 }
 clickDiv4 = () =>{
     let test4 = new Audio();
     test4.src = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
-    if(this.state.gameOnandOff){
+    if(this.state.gameOnandOff && this.state.startBtn){
     test4.play();}
 }
 
