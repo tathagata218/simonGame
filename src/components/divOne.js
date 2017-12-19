@@ -13,7 +13,7 @@ class CompOne extends Component{
       }
 
 clickStart = () => {
-
+    
 } 
 
 clickStrict = () => {
