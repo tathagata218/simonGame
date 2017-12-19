@@ -34,7 +34,10 @@ clickOnOff = (event) => {
     }
     else {
     this.setState({
-        gameOnandOff : false
+        gameOnandOff : false,
+        startBtn : false,
+        strictBtn : false
+
     });
     }
 
@@ -77,7 +80,7 @@ render (){
     <div id="btnContent">
         <div className="disBtn">
             <div id ="pointCol">
-                <h1 id="countID">00</h1>
+                <h1 id="countID">{this.state.count}</h1>
             </div>
             <p className="InfoScript">COUNT</p>          
         </div>
