@@ -38,27 +38,28 @@ clickOnOff = (event) => {
 clickDiv1 = () =>{
     let test = new  Audio();
     test.src ="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
-
+    if(this.state.gameOnandOff){
     test.play();
+        }
 }
 
 clickDiv2 = () =>{
     let test2 = new Audio();
     test2.src = "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3";
-
-    test2.play();
+    if(this.state.gameOnandOff){
+    test2.play();}
 }
 clickDiv3 = () =>{
     let test3 = new Audio();
     test3.src = "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3";
-
-    test3.play();
+    if(this.state.gameOnandOff){
+    test3.play();}
 }
 clickDiv4 = () =>{
     let test4 = new Audio();
     test4.src = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
-
-    test4.play();
+    if(this.state.gameOnandOff){
+    test4.play();}
 }
 
 render (){
