@@ -21,16 +21,16 @@ clickStrict = () => {
 } 
 
 clickOnOff = (event) => {
-if(event.target.checked){
+    if(event.target.checked){
     this.setState({
         gameOnandOff : event.target.checked
     });
-}
-else {
+    }
+    else {
     this.setState({
         gameOnandOff : false
     });
-}
+    }
 
  
 } 
@@ -73,10 +73,10 @@ render (){
     </div>
         
         <div className="colorDivContainer">
-            <div name="one" className="divOne mainDiv"></div>
-            <div name="two" className="divTwo mainDiv"></div>
-            <div name="three" className="divThree mainDiv"></div>
-            <div name="four" className="divFour mainDiv"></div>
+            <div name="one" className="divOne mainDiv" onClick={}></div>
+            <div name="two" className="divTwo mainDiv" onClick={}></div>
+            <div name="three" className="divThree mainDiv" onClick={}></div>
+            <div name="four" className="divFour mainDiv" onClick={}></div>
        </div> 
     </div>
     )
