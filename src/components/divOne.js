@@ -9,7 +9,9 @@ class CompOne extends Component{
         numOfWins : 0,
         boxIntial : ["one","two","three","four "],
         startBtn : false,
-        strictBtn : false
+        strictBtn : false,
+        compTurn : false,
+        playerTurn : false,
       }
 
 clickStart = () => {
@@ -19,7 +21,7 @@ this.setState({
 });
 
 
-
+setInterval ()
 
 } 
 
@@ -53,7 +55,7 @@ compGame = () => {
     let element3 = document.getElementById("three");
     let element4 = document.getElementById("four");
 
-    let randomNum 
+    element1.click();
 
 }
 
