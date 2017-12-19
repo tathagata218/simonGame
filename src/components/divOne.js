@@ -3,7 +3,9 @@ import "./divOne.css";
 class CompOne extends Component{
 
     state = {
-        boxArr : [],
+        compBoxArr : [],
+        playerChoice : [],
+        count : 0,
         numOfWins : 0,
         boxIntial : ["one","two","three","four "],
         startBtn : false,
@@ -11,7 +13,7 @@ class CompOne extends Component{
       }
 
 clickStart = () => {
-console.log(this.state);
+
 } 
 
 clickStrict = () => {
@@ -19,11 +21,17 @@ clickStrict = () => {
 } 
 
 clickOnOff = (event) => {
-if(event.target.cheched){
+if(event.target.checked){
     this.setState({
-        gameOnandOff : event.target.cheched
+        gameOnandOff : event.target.checked
     });
 }
+else {
+    this.setState({
+        gameOnandOff : false
+    });
+}
+
  
 } 
 
