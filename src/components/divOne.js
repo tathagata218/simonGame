@@ -21,7 +21,7 @@ this.setState({
 });
 
 
-  setInterval (this.compGame , 1000);
+  let mainInterval =  setInterval (this.compGame , 1000);
 
 } 
 
@@ -55,6 +55,10 @@ compGame = () => {
     let element = document.getElementById(this.state.boxIntial[random]);
      element.click();
     
+     if(!this.state.gameOnandOff && !this.state.startBtn){
+         clearInterval(mainInterval);
+     }
+
 
 }
 
@@ -65,7 +69,7 @@ clickDiv1 = () =>{
     if(this.state.gameOnandOff && this.state.startBtn){
     test.play();
     document.getElementById("one").style.opacity = '.5';
-    document.getElementById("one").style.opacity = "1";
+    setTimeout(function(){document.getElementById("one").style.opacity = "1";},500); 
 
     }   
     
@@ -77,7 +81,7 @@ clickDiv2 = () =>{
     if(this.state.gameOnandOff && this.state.startBtn){
     test2.play();
     document.getElementById("two").style.opacity = '.5';
-    setTimeout(function(){document.getElementById("two").style.opacity = "1";},500)
+    setTimeout(function(){document.getElementById("two").style.opacity = "1";},500);
     
     }
 }
@@ -85,14 +89,20 @@ clickDiv3 = () =>{
     let test3 = new Audio();
     test3.src = "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3";
     if(this.state.gameOnandOff && this.state.startBtn) {
-    test3.play();}
+    test3.play();
+    document.getElementById("three").style.opacity = '.5';
+    setTimeout(function(){document.getElementById("three").style.opacity = "1";},500);
+    }
 }
 clickDiv4 = () =>{
     let test4 = new Audio();
     let element = document.getElementById("four");
     test4.src = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
     if(this.state.gameOnandOff && this.state.startBtn){
-    test4.play();}
+    test4.play();
+    document.getElementById("four").style.opacity = '.5';
+    setTimeout(function(){document.getElementById("four").style.opacity = "1";},500);
+    }
 }
 
 colorChange1 = () => {
@@ -145,7 +155,7 @@ render (){
     </div>
         
         <div className="colorDivContainer">
-            <div id="one" name="one" className="divOne mainDiv" onMouseDown={this.colorChange1} onMouseUp={this.colorChangeBack1} onClick={this.clickDiv1} ></div>
+            <div id="one" name="one" className="divOne mainDiv" onClick={this.clickDiv1} ></div>
             <div id="two" name="two" className="divTwo mainDiv" onClick={this.clickDiv2}></div>
             <div id="three" name="three" className="divThree mainDiv" onClick={this.clickDiv3}></div>
             <div id="four" name="four" className="divFour mainDiv" onClick={this.clickDiv4}></div>
