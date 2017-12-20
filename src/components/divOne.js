@@ -21,7 +21,7 @@ this.setState({
 });
 
 
-//  setInterval (this.compGame , 1000);
+  setInterval (this.compGame , 1000);
 
 } 
 
