@@ -21,7 +21,7 @@ this.setState({
 });
 
 
-  const  mainInterval =  setInterval ( this.compGame, 1000);
+ setInterval ( this.compGame, 1000);
 
 } 
 
@@ -56,7 +56,7 @@ compGame = () => {
      element.click();
     
      if(!this.state.gameOnandOff && !this.state.startBtn){
-         clearInterval(mainInterval);
+         window.clearInterval();
      }
 
 
