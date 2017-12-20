@@ -54,9 +54,8 @@ compGame = () => {
 
     let element = document.getElementById(this.state.boxIntial[random]);
      element.click();
-     element.onmouseup();
-     element.onmousedown();
-     
+    this.colorChange1;
+    this.colorChangeBack1;
 
 }
 
