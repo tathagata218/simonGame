@@ -54,8 +54,7 @@ compGame = () => {
 
     let element = document.getElementById(this.state.boxIntial[random]);
      element.click();
-    this.colorChange1;
-    this.colorChangeBack1;
+    
 
 }
 
@@ -91,11 +90,16 @@ clickDiv4 = () =>{
 }
 
 colorChange1 = () => {
+    if(this.state.gameOnandOff && this.state.startBtn){
     document.getElementById("one").style.opacity = '.5';
+    }
 }
 
 colorChangeBack1 = () => {
+    if(this.state.gameOnandOff && this.state.startBtn){
+    
     document.getElementById("one").style.opacity = "1";
+    }
 }
 
 render (){
