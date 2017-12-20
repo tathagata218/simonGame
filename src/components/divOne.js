@@ -21,7 +21,7 @@ this.setState({
 });
 
 
- setInterval (this.compGame , 1000);
+//  setInterval (this.compGame , 1000);
 
 } 
 
@@ -64,7 +64,9 @@ clickDiv1 = () =>{
     test.src ="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
     if(this.state.gameOnandOff && this.state.startBtn){
     test.play();
-         
+    document.getElementById("one").style.opacity = '.5';
+    document.getElementById("one").style.opacity = "1";
+
     }   
     
 }
@@ -73,7 +75,9 @@ clickDiv2 = () =>{
     let test2 = new Audio();
     test2.src = "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3";
     if(this.state.gameOnandOff && this.state.startBtn){
-    test2.play();}
+    test2.play();
+    document.getElementById("two").style.opacity = '.5';
+    }
 }
 clickDiv3 = () =>{
     let test3 = new Audio();
