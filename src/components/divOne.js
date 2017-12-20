@@ -77,6 +77,8 @@ clickDiv2 = () =>{
     if(this.state.gameOnandOff && this.state.startBtn){
     test2.play();
     document.getElementById("two").style.opacity = '.5';
+    setTimeout(function(){document.getElementById("two").style.opacity = "1";},500)
+    
     }
 }
 clickDiv3 = () =>{
