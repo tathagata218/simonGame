@@ -7,7 +7,7 @@ class CompOne extends Component{
         playerChoice : [],
         count : 0,
         numOfWins : 0,
-        boxIntial : ["one","two","three","four "],
+        boxIntial : ["one","two","three","four"],
         startBtn : false,
         strictBtn : false,
         compTurn : false,
@@ -50,12 +50,10 @@ clickOnOff = (event) => {
 }
 
 compGame = () => {
-    let element1 = document.getElementById("one");
-    let element2 = document.getElementById("two");
-    let element3 = document.getElementById("three");
-    let element4 = document.getElementById("four");
+    let random = Math.floor(Math.random()*4);
 
-    element1.click();
+    let element1 = document.getElementById(this.state.boxIntial[random]);
+     element1.click();
 
 }
 
