@@ -21,7 +21,7 @@ this.setState({
 });
 
 
-setInterval (this.compGame , 1000);
+ setInterval (this.compGame , 1000);
 
 } 
 
@@ -52,17 +52,23 @@ clickOnOff = (event) => {
 compGame = () => {
     let random = Math.floor(Math.random()*4);
 
-    let element1 = document.getElementById(this.state.boxIntial[random]);
-     element1.click();
+    let element = document.getElementById(this.state.boxIntial[random]);
+     element.click();
+     element.onmouseup();
+     element.onmousedown();
+     
 
 }
 
 clickDiv1 = () =>{
     let test = new  Audio();
+   
     test.src ="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
     if(this.state.gameOnandOff && this.state.startBtn){
     test.play();
-        }
+         
+    }   
+    
 }
 
 clickDiv2 = () =>{
@@ -85,8 +91,12 @@ clickDiv4 = () =>{
     test4.play();}
 }
 
-colorChange = () => {
-    alert("this works");
+colorChange1 = () => {
+    document.getElementById("one").style.opacity = '.5';
+}
+
+colorChangeBack1 = () => {
+    document.getElementById("one").style.opacity = "1";
 }
 
 render (){
@@ -126,7 +136,7 @@ render (){
     </div>
         
         <div className="colorDivContainer">
-            <div id="one" name="one" className="divOne mainDiv" onClick={this.clickDiv1} ></div>
+            <div id="one" name="one" className="divOne mainDiv" onMouseDown={this.colorChange1} onMouseUp={this.colorChangeBack1} onClick={this.clickDiv1} ></div>
             <div id="two" name="two" className="divTwo mainDiv" onClick={this.clickDiv2}></div>
             <div id="three" name="three" className="divThree mainDiv" onClick={this.clickDiv3}></div>
             <div id="four" name="four" className="divFour mainDiv" onClick={this.clickDiv4}></div>

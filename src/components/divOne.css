@@ -23,6 +23,7 @@
     border-radius: 100%;
     border: 15px solid black;
     text-align: center;
+    z-index: 14;
 }
 .divOne{background-color: red;
     border-top-left-radius: 100%;   
