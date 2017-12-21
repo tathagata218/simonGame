@@ -11,9 +11,8 @@ class CompOne extends Component{
         startBtn : false,
         strictBtn : false,
         compTurn : false,
-        playerTurn : false,
-        strictGame : false,
-      }
+        playerTurn : false
+          }
 
 clickStart = () => {
     
@@ -52,6 +51,7 @@ clickStart = () => {
 } 
 
 
+
 playerFunc = () => {
 
 }
@@ -61,6 +61,8 @@ clickStrict = () => {
     this.setState({
         strictBtn : true
     }); 
+
+    document.getElementById("strictLight").style.color = "red"
 } 
 
 clickOnOff = (event) => {
