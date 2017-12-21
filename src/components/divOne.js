@@ -24,8 +24,7 @@ clickStart = () => {
 
  let interval =  setInterval ( () => {
     
-
-
+    
     let random = Math.floor(Math.random()*4);
     
     this.setState({
