@@ -84,21 +84,7 @@ clickOnOff = (event) => {
  
 }
 
-compGame = () => {
-    this.state.count++;
 
-
-    let random = Math.floor(Math.random()*4);
-
-    let element = document.getElementById(this.state.boxIntial[random]);
-     element.click();
-    
-     if(!this.state.gameOnandOff && !this.state.startBtn){
-         window.clearInterval();
-     }
-
-
-}
 
 clickDiv1 = () =>{
     let test = new  Audio();
