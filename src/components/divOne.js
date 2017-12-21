@@ -31,7 +31,9 @@ clickStart = () => {
     this.setState({
         startBtn : true,
         count : this.state.count++,
-       compBoxArr : [].push(this.state.boxIntial[random])
+       compBoxArr : [].push(this.state.boxIntial[random]),
+       playerTurn : true,
+       compTurn : false
     });
     
     let element = document.getElementById(this.state.boxIntial[random]);
@@ -47,6 +49,12 @@ clickStart = () => {
 }, 1000);
 
 } 
+
+
+playerFunc = () => {
+
+}
+
 
 clickStrict = () => {
     this.setState({
