@@ -31,7 +31,7 @@ clickStart = () => {
     this.setState({
         startBtn : true,
         count : this.state.count++,
-       compBoxArr : [].push(this.state.boxIntial[random]),
+       compBoxArr : this.state.compBoxArr.push(this.state.boxIntial[random]),
        playerTurn : true,
        compTurn : false
     });
