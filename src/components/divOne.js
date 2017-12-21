@@ -12,6 +12,7 @@ class CompOne extends Component{
         strictBtn : false,
         compTurn : false,
         playerTurn : false,
+        strictGame : false,
       }
 
 clickStart = () => {
@@ -101,6 +102,7 @@ clickDiv1 = () =>{
     let test = new  Audio();
    
     test.src ="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
+    
     if(this.state.gameOnandOff && this.state.startBtn){
     test.play();
     document.getElementById("one").style.opacity = '.5';
