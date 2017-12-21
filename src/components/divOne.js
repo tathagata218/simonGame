@@ -27,15 +27,16 @@ this.setState({
 
 
     let random = Math.floor(Math.random()*4);
+    
     this.setState({
         count : this.state.count++,
-        playerChoice : [].push(this.state.boxIntial[random])
+       compBoxArr : [].push(this.state.boxIntial[random])
     });
     
     let element = document.getElementById(this.state.boxIntial[random]);
      element.click();
     
-     if((!this.state.gameOnandOff && !this.state.startBtn) || this.state.count < this.state.compBoxArr.length ){
+     if((!this.state.gameOnandOff && !this.state.startBtn) || this.state.count <= this.state.compBoxArr.length ){
          clearInterval(interval);
      }
 
