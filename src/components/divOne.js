@@ -4,6 +4,7 @@ class CompOne extends Component{
 
     state = {
         playerChoice : [],
+        compBoxArr : [],
         count : 0,
         numOfWins : 0,
         boxIntial : ["one","two","three","four"],
@@ -15,27 +16,29 @@ class CompOne extends Component{
 
 clickStart = () => {
     
-this.setState({
+// this.setState({
     
-    count : this.state.count++,
-    compBoxArr : [].push("works")
-});
+//     count : this.state.count++,
+//     compBoxArr : testArr
+// });
 
 
  let interval =  setInterval ( () => {
     
     
     let random = Math.floor(Math.random()*4);
-    let newCount  = this.state.count++;
-    let newArrItem =[].push( this.state.boxIntial[random]);
-    
-    // this.setState({
-    //     startBtn : true,
-    //     count : newCount,
-    //    compBoxArr :newArrItem,
-    //    playerTurn : true,
-    //    compTurn : false
-    // });
+    let newCount  = this.state.count;
+    let newArrItems =this.state.compBoxArr;
+
+    newArrItems.push(this.state.boxIntial[random]);
+    newCount++;
+    this.setState({
+        startBtn : true,
+        count : newCount,
+       compBoxArr :newArrItem,
+       playerTurn : true,
+       compTurn : false
+    });
     
     let element = document.getElementById(this.state.boxIntial[random]);
      element.click();
