@@ -11,7 +11,8 @@ class CompOne extends Component{
         startBtn : false,
         strictBtn : false,
         compTurn : false,
-        playerTurn : false
+        playerTurn : false,
+        strictBtnCount : 0
           }
 
 clickStart = () => {
@@ -60,9 +61,9 @@ playerFunc = () => {
 
 
 clickStrict = () => {
-    let strictCount = 0;
-    strictCount ++;
-
+    let strictCount = strictCount +1;
+    
+    console.log(strictCount % 2);
     if( (strictCount % 2) !== 0 ) {
 
     this.setState({
@@ -106,13 +107,22 @@ clickOnOff = (event) => {
 clickDiv1 = () =>{
     
     let test = new  Audio();
-   
+    let playerArray = this.state.playerChoice;
+    playerArray.push("one");
+
+    
+
     test.src ="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
     
     if(this.state.gameOnandOff && this.state.startBtn){
     test.play();
     document.getElementById("one").style.opacity = '.5';
+    
     setTimeout(function(){document.getElementById("one").style.opacity = "1";},500); 
+    
+    this.setState({
+        playerChoice : playerArray
+    })
 
     }   
     
