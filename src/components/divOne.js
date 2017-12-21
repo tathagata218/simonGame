@@ -31,6 +31,7 @@ this.setState({
         count : this.state.count++,
         playerChoice : [].push(this.state.boxIntial[random])
     });
+    
     let element = document.getElementById(this.state.boxIntial[random]);
      element.click();
     
