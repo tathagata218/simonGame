@@ -50,6 +50,9 @@ clickOnOff = (event) => {
 }
 
 compGame = () => {
+    this.state.count++;
+
+
     let random = Math.floor(Math.random()*4);
 
     let element = document.getElementById(this.state.boxIntial[random]);
