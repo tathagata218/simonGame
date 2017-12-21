@@ -17,7 +17,8 @@ class CompOne extends Component{
 clickStart = () => {
     
 this.setState({
-    startBtn : true
+    startBtn : true,
+    count : 1
 });
 
 
@@ -108,18 +109,6 @@ clickDiv4 = () =>{
     }
 }
 
-colorChange1 = () => {
-    if(this.state.gameOnandOff && this.state.startBtn){
-    document.getElementById("one").style.opacity = '.5';
-    }
-}
-
-colorChangeBack1 = () => {
-    if(this.state.gameOnandOff && this.state.startBtn){
-    
-    document.getElementById("one").style.opacity = "1";
-    }
-}
 
 render (){
     return (
