@@ -22,7 +22,21 @@ this.setState({
 });
 
 
- setInterval ( this.compGame, 1000);
+ let interval =  setInterval ( () => {
+    this.state.count++;
+
+
+    let random = Math.floor(Math.random()*4);
+
+    let element = document.getElementById(this.state.boxIntial[random]);
+     element.click();
+    
+     if(!this.state.gameOnandOff && !this.state.startBtn){
+         clearInterval(interval);
+     }
+
+
+}, 1000);
 
 } 
 
