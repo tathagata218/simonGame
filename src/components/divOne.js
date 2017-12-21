@@ -39,7 +39,7 @@ clickStart = () => {
     
      console.log(this.state);
 
-     if((this.state.gameOnandOff || !this.state.startBtn || this.state.count <= this.state.compBoxArr.length ){
+     if(this.state.gameOnandOff || !this.state.startBtn || this.state.count <= this.state.compBoxArr.length ){
          clearInterval(interval);
      }
 
