@@ -3,7 +3,6 @@ import "./divOne.css";
 class CompOne extends Component{
 
     state = {
-        compBoxArr : [],
         playerChoice : [],
         count : 0,
         numOfWins : 0,
@@ -18,7 +17,8 @@ clickStart = () => {
     
 this.setState({
     
-    count : this.state.count++
+    count : this.state.count++,
+    compBoxArr : [].push("works")
 });
 
 
