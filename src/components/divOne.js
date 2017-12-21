@@ -26,11 +26,13 @@ clickStart = () => {
     
     
     let random = Math.floor(Math.random()*4);
+    let newCount  = this.state.count;
+    let newArrItem = this.state.boxIntial[random];
     
     this.setState({
         startBtn : true,
-        count : this.state.count++,
-       compBoxArr : this.state.compBoxArr.push(this.state.boxIntial[random]),
+        count : newCount++,
+       compBoxArr : this.state.compBoxArr.push(newArrItem),
        playerTurn : true,
        compTurn : false
     });
