@@ -63,7 +63,7 @@ clickStrict = () => {
     let strictCount = 0;
     strictCount ++;
 
-    if( strictCount % 2 == 0 ) {
+    if( (strictCount % 2) !== 0 ) {
 
     this.setState({
         strictBtn : true
@@ -71,7 +71,8 @@ clickStrict = () => {
 
     document.getElementById("strictLight").style.backgroundColor = "red";}
 
-    else  {
+    else if( (strictCount % 2) === 0 ) {
+    
         this.setState({
         strictBtn : false
     }); 
