@@ -56,7 +56,8 @@ clickOnOff = (event) => {
     this.setState({
         gameOnandOff : false,
         startBtn : false,
-        strictBtn : false
+        strictBtn : false,
+        count : 0
 
     });
     }
