@@ -35,7 +35,7 @@ clickStart = () => {
     this.setState({
         startBtn : true,
         count : newCount,
-       compBoxArr :newArrItem,
+       compBoxArr :newArrItems,
        playerTurn : true,
        compTurn : false
     });
@@ -52,7 +52,7 @@ clickStart = () => {
 
 }, 1000);
 
-setTimeout(() => {console.log(this.state)} , 1500);
+
 
 } 
 
