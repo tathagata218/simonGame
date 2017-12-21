@@ -16,10 +16,10 @@ class CompOne extends Component{
 
 clickStart = () => {
     
-// this.setState({
+this.setState({
     
-//     count : 1
-// });
+    count : this.state.count++
+});
 
 
  let interval =  setInterval ( () => {
@@ -29,13 +29,13 @@ clickStart = () => {
     let newCount  = this.state.count++;
     let newArrItem =[].push( this.state.boxIntial[random]);
     
-    this.setState({
-        startBtn : true,
-        count : newCount,
-       compBoxArr :newArrItem,
-       playerTurn : true,
-       compTurn : false
-    });
+    // this.setState({
+    //     startBtn : true,
+    //     count : newCount,
+    //    compBoxArr :newArrItem,
+    //    playerTurn : true,
+    //    compTurn : false
+    // });
     
     let element = document.getElementById(this.state.boxIntial[random]);
      element.click();
