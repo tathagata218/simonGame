@@ -22,7 +22,9 @@ clickStart = () => {
 // });
 
 
- let interval =  setInterval ( () => {
+ 
+     
+   gameContent =  () => {
     
 
 
@@ -37,12 +39,15 @@ clickStart = () => {
     let element = document.getElementById(this.state.boxIntial[random]);
      element.click();
     
-     if((!this.state.gameOnandOff && !this.state.startBtn) || this.state.count <= this.state.compBoxArr.length ){
+     console.log(this.state);
+
+     if(!this.state.gameOnandOff || !this.state.startBtn || this.state.count <= this.state.compBoxArr.length ){
          clearInterval(interval);
      }
 
 
-}, 1000);
+}
+let interval =  setInterval (gameContent, 1000);
 
 } 
 
