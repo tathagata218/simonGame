@@ -15,30 +15,19 @@ class CompOne extends Component{
           }
 
 clickStart = () => {
-    
-// this.setState({
-    
-//     count : this.state.count++,
-//     compBoxArr : testArr
-// });
-
+    let intervalCount = 0;
 
  let interval =  setInterval ( () => {
-    
-
-    if(this.state.gameOnandOff || this.state.startBtn || this.state.compCount <= this.state.compBoxArr.length ){
-        clearInterval(interval);
-    }
+     intervalCount++; 
     
     let random = Math.floor(Math.random()*4);
-    let newCount  = this.state.compCount;
+  
     let newArrItems =this.state.compBoxArr;
 
     newArrItems.push(this.state.boxIntial[random]);
-    newCount++;
+
     this.setState({
         startBtn : true,
-        count : newCount,
        compBoxArr :newArrItems,
        playerTurn : true,
        compTurn : false
@@ -49,7 +38,9 @@ clickStart = () => {
     
      console.log(this.state);
 
-     
+     if(!this.state.playerTurn && this.state.compBoxArr.length !== intervalCount ){
+        clearInterval(interval);
+    }
 
 
 }, 1000);
@@ -62,6 +53,9 @@ clickStart = () => {
 
 playerFunc = () => {
 
+
+
+
 }
 
 
@@ -70,7 +64,7 @@ clickStrict = () => {
         strictBtn : true
     }); 
 
-    document.getElementById("strictLight").style.color = "red";
+    document.getElementById("strictLight").style.backgroundColor = "red";
 } 
 
 clickOnOff = (event) => {
@@ -95,6 +89,7 @@ clickOnOff = (event) => {
 
 
 clickDiv1 = () =>{
+    
     let test = new  Audio();
    
     test.src ="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
@@ -129,7 +124,7 @@ clickDiv3 = () =>{
 }
 clickDiv4 = () =>{
     let test4 = new Audio();
-    let element = document.getElementById("four");
+    
     test4.src = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
     if(this.state.gameOnandOff && this.state.startBtn){
     test4.play();
