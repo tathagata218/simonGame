@@ -4,8 +4,8 @@ class CompOne extends Component{
 
     state = {
         playerChoice : [],
-        compBoxArr : [],
-        count : 0,
+        compBoxArr :["asdfasdf","asdfsd"],
+        count : 2,
         numOfWins : 0,
         boxIntial : ["one","two","three","four"],
         startBtn : false,
@@ -25,6 +25,10 @@ clickStart = () => {
 
  let interval =  setInterval ( () => {
     
+
+    if(this.state.gameOnandOff || this.state.startBtn || this.state.count <= this.state.compBoxArr.length ){
+        clearInterval(interval);
+    }
     
     let random = Math.floor(Math.random()*4);
     let newCount  = this.state.count;
@@ -45,9 +49,7 @@ clickStart = () => {
     
      console.log(this.state);
 
-     if(this.state.gameOnandOff || !this.state.startBtn || this.state.count <= this.state.compBoxArr.length ){
-         clearInterval(interval);
-     }
+     
 
 
 }, 1000);
