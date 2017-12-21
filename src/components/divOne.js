@@ -62,7 +62,7 @@ clickStrict = () => {
         strictBtn : true
     }); 
 
-    document.getElementById("strictLight").style.color = "red"
+    document.getElementById("strictLight").style.color = "red";
 } 
 
 clickOnOff = (event) => {
