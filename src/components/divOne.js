@@ -23,15 +23,18 @@ this.setState({
 
 
  let interval =  setInterval ( () => {
-    this.state.count++;
+    
 
 
     let random = Math.floor(Math.random()*4);
-
+    this.setState({
+        count : this.state.count++,
+        playerChoice : [].push(this.state.boxIntial[random])
+    });
     let element = document.getElementById(this.state.boxIntial[random]);
      element.click();
     
-     if(!this.state.gameOnandOff && !this.state.startBtn){
+     if((!this.state.gameOnandOff && !this.state.startBtn) || this.state.count < this.state.compBoxArr.length ){
          clearInterval(interval);
      }
 
