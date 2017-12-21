@@ -60,11 +60,25 @@ playerFunc = () => {
 
 
 clickStrict = () => {
+    let strictCount = 0;
+    strictCount ++;
+
+    if( strictCount % 2 == 0 ) {
+
     this.setState({
         strictBtn : true
     }); 
 
-    document.getElementById("strictLight").style.backgroundColor = "red";
+    document.getElementById("strictLight").style.backgroundColor = "red";}
+
+    else  {
+        this.setState({
+        strictBtn : false
+    }); 
+
+    document.getElementById("strictLight").style.backgroundColor = "black";
+    }
+    
 } 
 
 clickOnOff = (event) => {
