@@ -16,35 +16,17 @@ class CompOne extends Component{
           }
 
 clickStart = () => {
+    this.compRandomNum();
     let intervalCount = 0;
 
- let interval =  setInterval ( () => {
-     intervalCount++; 
-    
-    let random = Math.floor(Math.random()*4);
-  
-    let newArrItems =this.state.compBoxArr;
 
-    newArrItems.push(this.state.boxIntial[random]);
-
-    this.setState({
-        startBtn : true,
-       compBoxArr :newArrItems,
-       playerTurn : true,
-       compTurn : false
-    });
     
-    let element = document.getElementById(this.state.boxIntial[random]);
+    let element = document.getElementById(this.state.boxIntial[]);
      element.click();
     
      console.log(this.state);
 
-     if(!this.state.playerTurn && this.state.compBoxArr.length !== intervalCount ){
-        clearInterval(interval);
-    }
-
-
-}, 1000);
+    
 
 
 
@@ -58,8 +40,10 @@ compRandomNum = () => {
         compRandArr.push(this.state.boxIntial[randNum]);
     }
 
+    this.setState({
+        compBoxArr : compRandArr
+    });
 
-    
 }
 
 
