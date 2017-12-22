@@ -16,12 +16,18 @@ class CompOne extends Component{
           }
 
 clickStart = () => {
+    this.setState({
+        startBtn : true,
+        compBoxArr :[]
+
+    });
+
     this.compRandomNum();
  
 
 
     
-    let element = document.getElementById(this.state.boxIntial);
+    let element = document.getElementById(this.state.compBoxArr[0]);
      element.click();
     
      console.log(this.state);
