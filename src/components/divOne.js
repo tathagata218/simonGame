@@ -17,11 +17,11 @@ class CompOne extends Component{
 
 clickStart = () => {
     this.compRandomNum();
-    let intervalCount = 0;
+ 
 
 
     
-    let element = document.getElementById(this.state.boxIntial[]);
+    let element = document.getElementById(this.state.boxIntial);
      element.click();
     
      console.log(this.state);
@@ -56,7 +56,7 @@ let arr2 = this.state.compBoxArr;
 if(arr1.length !== arr2.length || arr2.length !== arr1.length){
     alert("Game Over");
 }
-else if (arr1.length == arr2.length ) {
+else if (arr1.length === arr2.length ) {
 
 for(let i =0 ; i<arr1.length ; i++) {
     if(arr1[i] !== arr2[i]){
