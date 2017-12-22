@@ -61,13 +61,16 @@ playerFunc = () => {
 
 
 clickStrict = () => {
-    let strictCount = strictCount +1;
+    let strictCount = this.state.strictBtnCount;
+
+    strictCount++;
     
-    console.log(strictCount % 2);
+    console.log(this.state.strictBtnCount);
     if( (strictCount % 2) !== 0 ) {
 
     this.setState({
-        strictBtn : true
+        strictBtn : true,
+        strictBtnCount : strictCount
     }); 
 
     document.getElementById("strictLight").style.backgroundColor = "red";}
@@ -75,7 +78,8 @@ clickStrict = () => {
     else if( (strictCount % 2) === 0 ) {
     
         this.setState({
-        strictBtn : false
+        strictBtn : false,
+        strictBtnCount : strictCount
     }); 
 
     document.getElementById("strictLight").style.backgroundColor = "black";
