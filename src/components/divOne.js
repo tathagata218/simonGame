@@ -48,7 +48,19 @@ clickStart = () => {
 
 
 
-} 
+}
+
+compRandomNum = () => {
+    let compRandArr = this.state.compBoxArr;
+
+    for( let i=0 ; i< 20; i++) {
+        let randNum = Math.floor(Math.random()*4);
+        compRandArr.push(this.state.boxIntial[randNum]);
+    }
+
+
+    
+}
 
 
 
