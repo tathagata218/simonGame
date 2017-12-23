@@ -36,7 +36,9 @@ clickStart = () => {
        })(i)
     
     }
-
+this.setState ({
+playerTurn : true
+});
 
 
 
