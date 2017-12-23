@@ -128,7 +128,10 @@ clickOnOff = (event) => {
         gameOnandOff : false,
         startBtn : false,
         strictBtn : false,
-        count : 0
+        count : 0,
+        playerChoice : [],
+        compBoxArr : []
+
 
     });
     }
