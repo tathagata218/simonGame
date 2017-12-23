@@ -141,10 +141,6 @@ clickDiv1 = () =>{
     let test = new  Audio();
     let playerArray = this.state.playerChoice;
     playerArray.push("one");
-  
-
-    
-
     test.src ="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
     
     if(this.state.gameOnandOff && this.state.startBtn && this.state.playerTurn){
@@ -170,7 +166,9 @@ clickDiv2 = () =>{
     test2.play();
     document.getElementById("two").style.opacity = '.5';
     setTimeout(function(){document.getElementById("two").style.opacity = "1";},500);
-    
+    this.setState({
+        playerChoice : playerArray
+    })
     }
 }
 clickDiv3 = () =>{
@@ -182,6 +180,9 @@ clickDiv3 = () =>{
     test3.play();
     document.getElementById("three").style.opacity = '.5';
     setTimeout(function(){document.getElementById("three").style.opacity = "1";},500);
+    this.setState({
+        playerChoice : playerArray
+    })
     }
 }
 clickDiv4 = () =>{
@@ -193,6 +194,9 @@ clickDiv4 = () =>{
     test4.play();
     document.getElementById("four").style.opacity = '.5';
     setTimeout(function(){document.getElementById("four").style.opacity = "1";},500);
+    this.setState({
+        playerChoice : playerArray
+    })
     }
 }
 
