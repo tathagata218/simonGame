@@ -23,6 +23,7 @@ clickStart = () => {
     });
 
     this.compRandomNum();
+    let time;
 
     let compBox = this.state.compBoxArr;
     for ( let i=0; i < this.state.numOfWins; i++){
@@ -31,9 +32,14 @@ clickStart = () => {
             let element = document.getElementById(compBox[i])
             element.click();
         },1500*i);
+        time = 1500*i;
        })(i)
     
     }
+
+
+
+
     
      console.log(this.state);
 }
@@ -52,14 +58,7 @@ compRandomNum = () => {
 
 }
 
-compPlay = (i) => {
-        setTimeout (()=>{
-            let element = document.getElementById(this.state.compBoxArr[i])
-            element.click();
-        },1000);
-    
-    
-}
+
 
 
 
@@ -142,12 +141,13 @@ clickDiv1 = () =>{
     let test = new  Audio();
     let playerArray = this.state.playerChoice;
     playerArray.push("one");
+  
 
     
 
     test.src ="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
     
-    if(this.state.gameOnandOff && this.state.startBtn){
+    if(this.state.gameOnandOff && this.state.startBtn && this.state.playerTurn){
     test.play();
     document.getElementById("one").style.opacity = '.5';
     
@@ -163,8 +163,10 @@ clickDiv1 = () =>{
 
 clickDiv2 = () =>{
     let test2 = new Audio();
+    let playerArray = this.state.playerChoice;
+    playerArray.push("two");
     test2.src = "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3";
-    if(this.state.gameOnandOff && this.state.startBtn){
+    if(this.state.gameOnandOff && this.state.startBtn && this.state.playerTurn){
     test2.play();
     document.getElementById("two").style.opacity = '.5';
     setTimeout(function(){document.getElementById("two").style.opacity = "1";},500);
@@ -173,8 +175,10 @@ clickDiv2 = () =>{
 }
 clickDiv3 = () =>{
     let test3 = new Audio();
+    let playerArray = this.state.playerChoice;
+    playerArray.push("three");
     test3.src = "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3";
-    if(this.state.gameOnandOff && this.state.startBtn) {
+    if(this.state.gameOnandOff && this.state.startBtn && this.state.playerTurn) {
     test3.play();
     document.getElementById("three").style.opacity = '.5';
     setTimeout(function(){document.getElementById("three").style.opacity = "1";},500);
@@ -182,9 +186,10 @@ clickDiv3 = () =>{
 }
 clickDiv4 = () =>{
     let test4 = new Audio();
-    
+    let playerArray = this.state.playerChoice;
+    playerArray.push("four");
     test4.src = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
-    if(this.state.gameOnandOff && this.state.startBtn){
+    if(this.state.gameOnandOff && this.state.startBtn && this.state.playerTurn){
     test4.play();
     document.getElementById("four").style.opacity = '.5';
     setTimeout(function(){document.getElementById("four").style.opacity = "1";},500);
