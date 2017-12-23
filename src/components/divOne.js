@@ -6,7 +6,7 @@ class CompOne extends Component{
         playerChoice : [],
         compBoxArr :[],
         compCount : 0,
-        numOfWins : 0,
+        numOfWins : 1,
         boxIntial : ["one","two","three","four"],
         startBtn : false,
         strictBtn : false,
@@ -23,19 +23,19 @@ clickStart = () => {
     });
 
     this.compRandomNum();
- 
 
-
+    let compBox = this.state.compBoxArr;
+    for ( let i=0; i < this.state.numOfWins; i++){
+       (function (i) {
+        setTimeout (()=>{
+            let element = document.getElementById(compBox[i])
+            element.click();
+        },1500*i);
+       })(i)
     
-    let element = document.getElementById(this.state.compBoxArr[0]);
-     element.click();
+    }
     
      console.log(this.state);
-
-    
-
-
-
 }
 
 compRandomNum = () => {
@@ -50,6 +50,15 @@ compRandomNum = () => {
         compBoxArr : compRandArr
     });
 
+}
+
+compPlay = (i) => {
+        setTimeout (()=>{
+            let element = document.getElementById(this.state.compBoxArr[i])
+            element.click();
+        },1000);
+    
+    
 }
 
 
