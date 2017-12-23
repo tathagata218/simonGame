@@ -37,7 +37,8 @@ clickStart = () => {
     
     }
 this.setState ({
-playerTurn : true
+playerTurn : true,
+playerChoice : []
 });
 
 
@@ -158,7 +159,9 @@ clickDiv1 = () =>{
         playerChoice : playerArray
     })
 
-    }   
+    }
+    
+    console.log(this.state);
     
 }
 
