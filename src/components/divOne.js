@@ -178,6 +178,7 @@ clickDiv2 = () =>{
         playerChoice : playerArray
     })
     }
+    console.log(this.state);
 }
 clickDiv3 = () =>{
     let test3 = new Audio();
@@ -192,6 +193,7 @@ clickDiv3 = () =>{
         playerChoice : playerArray
     })
     }
+    console.log(this.state);
 }
 clickDiv4 = () =>{
     let test4 = new Audio();
@@ -206,6 +208,7 @@ clickDiv4 = () =>{
         playerChoice : playerArray
     })
     }
+    console.log(this.state);
 }
 
 
