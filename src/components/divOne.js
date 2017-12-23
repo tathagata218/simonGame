@@ -18,7 +18,9 @@ class CompOne extends Component{
 clickStart = () => {
     this.setState({
         startBtn : true,
-        compBoxArr :[]
+        playerTurn :true,        
+        compBoxArr :[],
+        playerChoice :[]
 
     });
 
@@ -34,12 +36,13 @@ clickStart = () => {
         },1500*i);
         time = 1500*i;
        })(i)
-    
+       
     }
-this.setState ({
-playerTurn : true,
-playerChoice : []
-});
+
+   setTimeout(() => {this.setState ({
+        
+    playerChoice : []
+        });},time+100);
 
 
 
