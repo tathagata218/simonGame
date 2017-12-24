@@ -73,10 +73,7 @@ playerFunc = () => {
 let arr1 = this.state.playerChoice;
 let arr2 = this.state.compBoxArr;
 
-if(arr1.length !== arr2.length || arr2.length !== arr1.length){
-    alert("Game Over");
-}
-else if (arr1.length === arr2.length ) {
+
 
 for(let i =0 ; i<arr1.length ; i++) {
     if(arr1[i] !== arr2[i]){
@@ -84,14 +81,14 @@ for(let i =0 ; i<arr1.length ; i++) {
         }
 
     else {
-        this.clickStart();
-    }
+    alert("all the array is right") 
+        }
     }
 
 }
 
 
-}
+
 
 
 clickStrict = () => {
