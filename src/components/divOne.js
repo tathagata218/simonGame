@@ -44,7 +44,26 @@ clickStart = () => {
     playerChoice : []
         });},time+100);
 
-setTimeout (this.playerFunc, time+200)
+    setTimeout (() => {
+        let arr1 = this.state.playerChoice;
+        let arr2 = this.state.compBoxArr;
+        
+        
+        
+        for(let i = 0 ; i<arr1.length ; i++) {
+            if(arr1[i] !== arr2[i]){
+                alert("game Over")
+                }
+        
+            else {
+                let numTurns = this.state.numOfWins + 1;
+            this.setState({
+                numOfWins : numTurns
+            });
+                }
+            }
+
+    }, time+2000)
 
     
      console.log(this.state);
@@ -81,7 +100,10 @@ for(let i =0 ; i<arr1.length ; i++) {
         }
 
     else {
-    alert("all the array is right"); 
+        let numTurns = this.state.numOfWins++;
+    this.setState({
+        numOfWins : numTurns
+    });
         }
     }
 
