@@ -52,7 +52,14 @@ clickStart = () => {
         
         for(let i = 0 ; i<arr1.length ; i++) {
             if(arr1[i] !== arr2[i]){
-                alert("game Over")
+             if(this.state.strictBtn){
+                this.setState({
+                    numOfWins : 1
+                });
+             }
+             else  {
+                 this.clickStart();
+             } 
                 }
         
             else {
@@ -60,6 +67,7 @@ clickStart = () => {
             this.setState({
                 numOfWins : numTurns
             });
+            this.clickStart();
                 }
             }
 
