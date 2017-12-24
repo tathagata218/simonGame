@@ -44,7 +44,7 @@ clickStart = () => {
     playerChoice : []
         });},time+100);
 
-
+setTimeout (this.playerFunc, time+200)
 
     
      console.log(this.state);
@@ -81,7 +81,7 @@ for(let i =0 ; i<arr1.length ; i++) {
         }
 
     else {
-    alert("all the array is right") 
+    alert("all the array is right"); 
         }
     }
 
