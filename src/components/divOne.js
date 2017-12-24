@@ -42,8 +42,8 @@ const testFunction =  () => {
         setTimeout (()=>{
             let element = document.getElementById(compBox[i])
             element.click();
-        },1500*i);
-        time = 1500*i;
+        },500*i);
+        time = 500*i;
        })(i)
        
     }
@@ -91,7 +91,7 @@ const testFunction =  () => {
                 }
             }
 
-    }, time+4000)
+    }, time+7000)
 
 
 
@@ -115,7 +115,7 @@ setTimeout (()=>{
             numOfWins : 1});
             this.clickStart();
     }
-}, time+4500);
+}, time+7100);
 }
 testFunction();
      //console.log(this.state);
