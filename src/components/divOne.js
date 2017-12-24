@@ -23,8 +23,10 @@ clickStart = () => {
         playerChoice :[]
 
     });
-
     this.compRandomNum();
+    
+const testFunction =  () => {
+
     let time;
 
     let compBox = this.state.compBoxArr;
@@ -67,13 +69,15 @@ clickStart = () => {
             this.setState({
                 numOfWins : numTurns
             });
-            this.clickStart();
+            testFunction();
                 }
             }
 
     }, time+2000)
 
-    
+}
+
+testFunction();
      console.log(this.state);
 }
 
