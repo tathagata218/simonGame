@@ -74,7 +74,8 @@ const testFunction =  () => {
              else  {
                  this.setState({
                      strictOff: true,
-                     playerChoice : []
+                     playerChoice : [],
+                     youGotItWrong : true
                  })
              } 
                 }
@@ -83,7 +84,8 @@ const testFunction =  () => {
                 
             this.setState({
                 playerChoice : [],
-                returnRegularFunc : true
+                returnRegularFunc : true,
+               youGotItWrong : false
 
             });
             console.log(this.state);
@@ -96,15 +98,15 @@ const testFunction =  () => {
 
 
 //This is the Fourth SetTImeout Function--------------------------------------------
-setTimeout (()=>{
-    if(this.state.returnRegularFunc && this.state.gameOnandOff){
+setTimeout (()=>{ 
+    if(this.state.returnRegularFunc && this.state.gameOnandOff && !this.state.youGotItWrong){
         let numTurns = this.state.numOfWins + 1;
         this.setState({
             numOfWins : numTurns});
         testFunction();
         
     console.log("in the final func")}
-    else if(this.state.strictOff && this.state.gameOnandOff){
+    else if(this.state.strictOff && this.state.gameOnandOff && this.state.youGotItWrong){
         this.setState({
             numOfWins : this.state.numOfWins});
         testFunction();
@@ -135,35 +137,7 @@ compRandomNum = () => {
 
 }
 
-
-
-
-
-playerFunc = () => {
-
-let arr1 = this.state.playerChoice;
-let arr2 = this.state.compBoxArr;
-
-
-
-for(let i =0 ; i<arr1.length ; i++) {
-    if(arr1[i] !== arr2[i]){
-        alert("game Over")
-        }
-
-    else {
-        let numTurns = this.state.numOfWins++;
-    this.setState({
-        numOfWins : numTurns
-    });
-        }
-    }
-
-}
-
-
-
-
+//This is the strict button function ----------------------------------------------------------------------
 
 clickStrict = () => {
     let strictCount = this.state.strictBtnCount;
@@ -192,6 +166,8 @@ clickStrict = () => {
     
 } 
 
+//This is the on and off button function -------------------------------------------------------------------------
+
 clickOnOff = (event) => {
     if(event.target.checked){
     this.setState({
@@ -215,7 +191,7 @@ clickOnOff = (event) => {
  
 }
 
-
+//This is the click div 1 fucntion------------------------------------------------------------------------------------
 
 clickDiv1 = () =>{
     
@@ -239,7 +215,7 @@ clickDiv1 = () =>{
     // console.log(this.state);
     
 }
-
+//This is the click div 2 fucntion------------------------------------------------------------------------------------
 clickDiv2 = () =>{
     let test2 = new Audio();
     let playerArray = this.state.playerChoice;
@@ -255,6 +231,7 @@ clickDiv2 = () =>{
     }
     // console.log(this.state);
 }
+//This is the click div 3 fucntion------------------------------------------------------------------------------------
 clickDiv3 = () =>{
     let test3 = new Audio();
     let playerArray = this.state.playerChoice;
@@ -270,6 +247,7 @@ clickDiv3 = () =>{
     }
     // console.log(this.state);
 }
+//This is the click div 4 fucntion------------------------------------------------------------------------------------
 clickDiv4 = () =>{
     let test4 = new Audio();
     let playerArray = this.state.playerChoice;
@@ -286,7 +264,7 @@ clickDiv4 = () =>{
     // console.log(this.state);
 }
 
-
+//This is the render method -------------------------------------------------------------------------------------------
 render (){
     return (
     <div className="gameContent">
