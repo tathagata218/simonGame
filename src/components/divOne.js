@@ -153,7 +153,8 @@ clickOnOff = (event) => {
         strictBtn : false,
         count : 0,
         playerChoice : [],
-        compBoxArr : []
+        compBoxArr : [],
+        numOfWins : 1 
 
 
     });
@@ -243,7 +244,7 @@ render (){
     <div id="btnContent">
         <div className="disBtn">
             <div id ="pointCol">
-                <h1 id="countID">{this.state.count}</h1>
+                <h1 id="countID">{this.state.numOfWins}</h1>
             </div>
             <p className="InfoScript">COUNT</p>          
         </div>
