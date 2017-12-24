@@ -20,15 +20,22 @@ clickStart = () => {
         startBtn : true,
         playerTurn :true,        
         compBoxArr :[],
-        playerChoice :[]
+        playerChoice :[],
+        returnRegularFunc : false
 
     });
     this.compRandomNum();
-    
+     
+
+//This is the recuring function -------------------------------------------------
 const testFunction =  () => {
 
-    let time;
+    this.setState({
+        playerChoice : []
+    });
 
+    let time;
+//This is the First SetTImeout Function--------------------------------------------
     let compBox = this.state.compBoxArr;
     for ( let i=0; i < this.state.numOfWins; i++){
        (function (i) {
@@ -40,12 +47,17 @@ const testFunction =  () => {
        })(i)
        
     }
+//This is the second SetTImeout Function--------------------------------------------
 
    setTimeout(() => {this.setState ({
         
     playerChoice : []
-        });},time+100);
+        });
+    console.log(this.state);
+    console.log(time);
+    },time+100);
 
+//This is the Third SetTImeout Function--------------------------------------------
     setTimeout (() => {
         let arr1 = this.state.playerChoice;
         let arr2 = this.state.compBoxArr;
@@ -56,29 +68,57 @@ const testFunction =  () => {
             if(arr1[i] !== arr2[i]){
              if(this.state.strictBtn){
                 this.setState({
-                    numOfWins : 1
+                    returnRegularFunc :false
                 });
              }
              else  {
-                 this.clickStart();
+                 this.setState({
+                     strictOff: true,
+                     playerChoice : []
+                 })
              } 
                 }
         
             else {
-                let numTurns = this.state.numOfWins + 1;
+                
             this.setState({
-                numOfWins : numTurns
+                playerChoice : [],
+                returnRegularFunc : true
+
             });
-            testFunction();
+            console.log(this.state);
+            
                 }
             }
 
-    }, time+2000)
+    }, time+4000)
 
+
+
+//This is the Fourth SetTImeout Function--------------------------------------------
+setTimeout (()=>{
+    if(this.state.returnRegularFunc && this.state.gameOnandOff){
+        let numTurns = this.state.numOfWins + 1;
+        this.setState({
+            numOfWins : numTurns});
+        testFunction();
+        
+    console.log("in the final func")}
+    else if(this.state.strictOff && this.state.gameOnandOff){
+        this.setState({
+            numOfWins : this.state.numOfWins});
+        testFunction();
+    }
+
+    else if(!this.state.returnRegularFunc && this.state.gameOnandOff){
+        this.setState({
+            numOfWins : 1});
+            this.clickStart();
+    }
+}, time+4500);
 }
-
 testFunction();
-     console.log(this.state);
+     //console.log(this.state);
 }
 
 compRandomNum = () => {
@@ -159,15 +199,15 @@ clickOnOff = (event) => {
     });
     }
     else {
+        window.clearTimeout()
     this.setState({
         gameOnandOff : false,
         startBtn : false,
         strictBtn : false,
-        count : 0,
         playerChoice : [],
         compBoxArr : [],
-        numOfWins : 1 
-
+        numOfWins : 1, 
+        returnRegularFunc : false
 
     });
     }
@@ -188,7 +228,7 @@ clickDiv1 = () =>{
     test.play();
     document.getElementById("one").style.opacity = '.5';
     
-    setTimeout(function(){document.getElementById("one").style.opacity = "1";},500); 
+    setTimeout(function(){document.getElementById("one").style.opacity = "1";},150); 
     
     this.setState({
         playerChoice : playerArray
@@ -196,7 +236,7 @@ clickDiv1 = () =>{
 
     }
     
-    console.log(this.state);
+    // console.log(this.state);
     
 }
 
@@ -208,12 +248,12 @@ clickDiv2 = () =>{
     if(this.state.gameOnandOff && this.state.startBtn && this.state.playerTurn){
     test2.play();
     document.getElementById("two").style.opacity = '.5';
-    setTimeout(function(){document.getElementById("two").style.opacity = "1";},500);
+    setTimeout(function(){document.getElementById("two").style.opacity = "1";},150);
     this.setState({
         playerChoice : playerArray
     })
     }
-    console.log(this.state);
+    // console.log(this.state);
 }
 clickDiv3 = () =>{
     let test3 = new Audio();
@@ -223,12 +263,12 @@ clickDiv3 = () =>{
     if(this.state.gameOnandOff && this.state.startBtn && this.state.playerTurn) {
     test3.play();
     document.getElementById("three").style.opacity = '.5';
-    setTimeout(function(){document.getElementById("three").style.opacity = "1";},500);
+    setTimeout(function(){document.getElementById("three").style.opacity = "1";},150);
     this.setState({
         playerChoice : playerArray
     })
     }
-    console.log(this.state);
+    // console.log(this.state);
 }
 clickDiv4 = () =>{
     let test4 = new Audio();
@@ -238,12 +278,12 @@ clickDiv4 = () =>{
     if(this.state.gameOnandOff && this.state.startBtn && this.state.playerTurn){
     test4.play();
     document.getElementById("four").style.opacity = '.5';
-    setTimeout(function(){document.getElementById("four").style.opacity = "1";},500);
+    setTimeout(function(){document.getElementById("four").style.opacity = "1";},150);
     this.setState({
         playerChoice : playerArray
     })
     }
-    console.log(this.state);
+    // console.log(this.state);
 }
 
 
