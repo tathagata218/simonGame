@@ -16,7 +16,16 @@ class CompOne extends Component{
           }
 
 clickStart = () => {
-    window.clearTimeout();
+    let timeOut1; 
+    let timeOut2; 
+    let timeOut3; 
+    let timeOut4; 
+    let timeOut5; 
+   clearTimeout(timeOut1);
+   clearTimeout(timeOut2);
+   clearTimeout(timeOut3);
+   clearTimeout(timeOut4);
+   clearTimeout(timeOut5);
     this.setState({
         startBtn : true,
         playerTurn :true,        
@@ -31,7 +40,11 @@ clickStart = () => {
 
 //This is the recuring function -------------------------------------------------
 const testFunction =  () => {
-    window.clearTimeout();
+    clearTimeout(timeOut1);
+    clearTimeout(timeOut2);
+    clearTimeout(timeOut3);
+    clearTimeout(timeOut4);
+    clearTimeout(timeOut5);
     this.setState({
         playerChoice : []
     });
@@ -41,17 +54,17 @@ const testFunction =  () => {
     let compBox = this.state.compBoxArr;
     for ( let i=0; i < this.state.numOfWins; i++){
        (function (i) {
-        setTimeout (()=>{
+        timeOut1 = setTimeout (()=>{
             let element = document.getElementById(compBox[i])
             element.click();
-        },500*i);
-        time = 500*i;
+        },500*i+1000);
+        time = 500*i+1000;
        })(i)
        
     }
 //This is the second SetTImeout Function--------------------------------------------
 
-   setTimeout(() => {this.setState ({
+   timeOut2= setTimeout(() => {this.setState ({
         
     playerChoice : []
         });
@@ -60,7 +73,7 @@ const testFunction =  () => {
     },time+100);
 
 //This is the Third SetTImeout Function--------------------------------------------
-    setTimeout (() => {
+   timeOut4=  setTimeout (() => {
         let arr1 = this.state.playerChoice;
         let arr2 = this.state.compBoxArr;
         
@@ -95,12 +108,12 @@ const testFunction =  () => {
                 }
             }
 
-    }, time+7000)
+    }, time+6000)
 
 
 
 //This is the Fourth SetTImeout Function--------------------------------------------
-setTimeout (()=>{ 
+ timeOut5 =  setTimeout (()=>{ 
     if(this.state.returnRegularFunc && this.state.gameOnandOff && !this.state.youGotItWrong){
         let numTurns = this.state.numOfWins + 1;
         this.setState({
@@ -119,7 +132,7 @@ setTimeout (()=>{
             numOfWins : 1});
             this.clickStart();
     }
-}, time+7100);
+}, time+6100);
 }
 testFunction();
      //console.log(this.state);
@@ -177,6 +190,7 @@ clickOnOff = (event) => {
     });
     }
     else {
+       
         window.clearTimeout()
     this.setState({
         gameOnandOff : false,
