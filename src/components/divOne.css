@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Anton');
 
 .mainDiv{
     height: 300px;
@@ -52,13 +52,17 @@
 #btnContent{
 display: flex;
 justify-content: center;
-padding-top: 35px;
+padding-top: 1px;
 }
-
+#gameCircleTitle{
+    margin-bottom: 0;
+    font-family: 'Anton', sans-serif;
+    font-size: 55px;
+}
 .disBtn{
     padding: 0;
     text-align: center;
-    border:1px solid black;
+    /* border:1px solid black; */
     /* height: 50px; */
     width: 80px;
     margin: 0 auto;

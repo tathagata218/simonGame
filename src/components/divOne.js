@@ -16,12 +16,14 @@ class CompOne extends Component{
           }
 
 clickStart = () => {
+    window.clearTimeout();
     this.setState({
         startBtn : true,
         playerTurn :true,        
         compBoxArr :[],
         playerChoice :[],
-        returnRegularFunc : false
+        returnRegularFunc : false,
+        numOfWins : 1
 
     });
     this.compRandomNum();
@@ -29,7 +31,7 @@ clickStart = () => {
 
 //This is the recuring function -------------------------------------------------
 const testFunction =  () => {
-
+    window.clearTimeout();
     this.setState({
         playerChoice : []
     });
@@ -270,7 +272,7 @@ render (){
     <div className="gameContent">
      
     <div className="inforDiv">
-     <h1>Simon</h1>
+     <h1 id="gameCircleTitle">Simon</h1>
     <div id="btnContent">
         <div className="disBtn">
             <div id ="pointCol">

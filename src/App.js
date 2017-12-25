@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div>
 
-        <h1 className="title">The Simon Game</h1>
+         <div className="title"> </div>
       <div className="contentConatiner">
   
       <CompOne />
